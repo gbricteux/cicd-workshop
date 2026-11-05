@@ -12,4 +12,4 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "CI is alive. Now make it useful! 🚀"
+      - run: echo "CI is alive. Now make it useful! 🚀🚀🚀"
