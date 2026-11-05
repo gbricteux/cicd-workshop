@@ -8,6 +8,11 @@ on:
     branches: [main]
   pull_request:
 
+# Cancel superseded runs on the same branch/PR (saves minutes)
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   lint:
     runs-on: ubuntu-latest
