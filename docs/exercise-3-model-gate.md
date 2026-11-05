@@ -30,7 +30,7 @@ Open **three** PRs (or three commits on one PR) and, for each one, predict first
 
 | # | Change in `src/churn_workshop/features.py` | Unit tests | Gate (AUC ≥ 0.70) |
 |---|--------------------------------------------|-----------|-------------------|
-| 1 | `< 6` → `< 60` in `add_features` | ? | ? |
+| 1 | `< 6` → `< 60` in `add_features` | X | V |
 | 2 | Remove `"tenure_months"` from `NUMERIC` | ? | ? |
 | 3 | Set `NUMERIC = ["is_new_customer"]` | ? | ? |
 
