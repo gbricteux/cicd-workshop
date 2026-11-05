@@ -70,4 +70,7 @@ def validate_data(df: pd.DataFrame) -> pd.DataFrame:
     if not set(df["churned"].unique()) <= {0, 1}:
         raise DataValidationError("churned must be 0 or 1")
 
+    if (df["support_tickets"] < 0).any():
+        raise DataValidationError("support_tickets must be >= 0")
+
     return df
