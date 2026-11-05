@@ -28,11 +28,11 @@ Place it **before** the upload step. Why?
 ## Part D: Sabotage the model 💥 (10 min)
 Open **three** PRs (or three commits on one PR) and, for each one, predict first: *will the unit tests fail? will the gate fail?*
 
-| # | Change in `src/churn_workshop/features.py` | Unit tests | Gate (AUC ≥ 0.70) |
-|---|--------------------------------------------|-----------|-------------------|
-| 1 | `< 6` → `< 60` in `add_features` | X | V |
-| 2 | Remove `"tenure_months"` from `NUMERIC` | ? | ? |
-| 3 | Set `NUMERIC = ["is_new_customer"]` | ? | ? |
+| # | Change in `src/churn_workshop/features.py` | Unit tests | Gate (AUC ≥ 0.70) | accuracy (0.748) |
+|---|--------------------------------------------|-----------|-------------------|----------|
+| 1 | `< 6` → `< 60` in `add_features` | X | V | 0.74 |
+| 2 | Remove `"tenure_months"` from `NUMERIC` | V | V | 0.708 |
+| 3 | Set `NUMERIC = ["is_new_customer"]` | ? | ? | |
 
 <details><summary>What you should observe</summary>
 
