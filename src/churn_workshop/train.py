@@ -21,6 +21,7 @@ from churn_workshop.data import generate_data, validate_data
 from churn_workshop.features import FEATURES, TARGET, add_features, build_preprocessor
 
 
+# train model
 def train_model(df: pd.DataFrame, seed: int = 42) -> tuple[Pipeline, dict]:
     df = add_features(validate_data(df))
     X_train, X_test, y_train, y_test = train_test_split(
