@@ -29,7 +29,7 @@ Push again twice. What happens to the older run?
 ## Part D: Coverage artifact
 1. Change the test command: `pytest --cov --cov-report=xml --cov-report=term-missing`
 2. Upload `coverage.xml` using `actions/upload-artifact@v4` (only from one matrix entry).
-3. Find it on the run summary page and download it.
+3. Find it on the run summary page and download it (in PR, tab Checks, Artifacts)
 
 ## Part E: Least privilege
 Add a top-level block:
